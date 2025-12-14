@@ -5,3 +5,8 @@
 # python code for the training set onto the plane defined by the first two princliple components
 w2=Vt.t[:,:2]
 x2d=x_centered.dot(w2)
+
+# auto matically centering the data
+from sklearn.decomposition import PCA
+pca=PCA(n_components=2)
+x2d=pca.fit_transform(x)
